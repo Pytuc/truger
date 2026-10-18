@@ -3,7 +3,7 @@ import flet as ft
 
 async def main(page: ft.Page):
     # Заголовок приложения.
-    page.title = "Habit Tracker"
+    page.title = "Habit Tracker +"
 
     # Выравниваем содержимое страницы по центру.
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
@@ -36,7 +36,7 @@ async def main(page: ft.Page):
 
     state = {
         "days": saved_days,
-        "goal": 21,
+        "goal": 100,
     }
 
     # -----------------------------
@@ -59,8 +59,8 @@ async def main(page: ft.Page):
 
     # Круг со счётчиком.
     counter_circle = ft.Container(
-        width=220,
-        height=220,
+        width=1000,
+        height=260,
 
         # Помещаем текст внутрь круга.
         content=days_text,
@@ -90,6 +90,8 @@ async def main(page: ft.Page):
             "habit_tracker.name",
             name,
         )
+
+
 
     # Сохраняем название,
     # когда пользователь закончил ввод.
